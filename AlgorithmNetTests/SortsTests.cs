@@ -6,11 +6,11 @@ namespace AlgorithmNetTests
 {
     public class SortsTests
     {
-        private Sorts prueba;
+        private Sorts shorts;
         [SetUp]
         public void Setup()
         {
-            prueba = new Sorts();
+            shorts = new Sorts();
         }
         #region BubbbleSort
         [Test]
@@ -18,7 +18,7 @@ namespace AlgorithmNetTests
         {
             int[] arr = { 5, 2, 1, 4, 3 };
 
-            var result = prueba.BubbleSort(arr);
+            var result = shorts.BubbleSort(arr);
             Assert.That(result[0], Is.EqualTo(1));
             Assert.That(result[0], Is.LessThan(result[1]));
             Assert.That(result[4], Is.EqualTo(5));
@@ -29,7 +29,7 @@ namespace AlgorithmNetTests
         {
             int[] arr = { };
 
-            var result = prueba.BubbleSort(arr);
+            var result = shorts.BubbleSort(arr);
             Assert.That(result.Length, Is.EqualTo(0));
         }
 
@@ -38,7 +38,7 @@ namespace AlgorithmNetTests
         {
             var arr = new List<int> { 5, 2, 1, 4, 3 };
 
-            var result = prueba.BubbleSort(arr);
+            var result = shorts.BubbleSort(arr);
             Assert.That(result[0], Is.EqualTo(1));
             Assert.That(result[0], Is.LessThan(result[1]));
             Assert.That(result[4], Is.EqualTo(5));
@@ -49,7 +49,7 @@ namespace AlgorithmNetTests
         {
             var arr = new List<int> { };
 
-            var result = prueba.BubbleSort(arr);
+            var result = shorts.BubbleSort(arr);
             Assert.That(result.Count, Is.EqualTo(0));
         }
         
@@ -63,7 +63,7 @@ namespace AlgorithmNetTests
                 new Person {Id=3, Name="asd"}
             };
 
-            var result = prueba.BubbleSort(arr, "Id");
+            var result = shorts.BubbleSort(arr, "Id");
             Assert.That(result.Count, Is.EqualTo(4));
             Assert.That(result[0].Id, Is.EqualTo(1));
         }
@@ -77,7 +77,7 @@ namespace AlgorithmNetTests
                 new Person {Id=3, Name="asd"}
             };
 
-            var result = prueba.BubbleSort(arr, "Name");
+            var result = shorts.BubbleSort(arr, "Name");
             Assert.That(result.Count, Is.EqualTo(4));
             Assert.That(result[0].Id, Is.EqualTo(2));
         }
@@ -89,7 +89,7 @@ namespace AlgorithmNetTests
         {
             var arr = new List<int> { 5, 2, 1, 4, 3 };
 
-            var result = prueba.SelectionSort(arr);
+            var result = shorts.SelectionSort(arr);
             Assert.That(result[0], Is.EqualTo(1));
             Assert.That(result[0], Is.LessThan(result[1]));
             Assert.That(result[4], Is.EqualTo(5));
@@ -99,7 +99,7 @@ namespace AlgorithmNetTests
         {
             var arr = new List<int> {};
 
-            var result = prueba.SelectionSort(arr);
+            var result = shorts.SelectionSort(arr);
             Assert.That(result.Count, Is.EqualTo(0));
         }
         [Test]
@@ -107,7 +107,7 @@ namespace AlgorithmNetTests
         {
             int[] arr = { 5, 2, 1, 4, 3 };
 
-            var result = prueba.SelectionSort(arr);
+            var result = shorts.SelectionSort(arr);
             Assert.That(result[0], Is.EqualTo(1));
             Assert.That(result[0], Is.LessThan(result[1]));
             Assert.That(result[4], Is.EqualTo(5));
@@ -117,7 +117,7 @@ namespace AlgorithmNetTests
         {
             int[] arr = {};
 
-            var result = prueba.SelectionSort(arr);
+            var result = shorts.SelectionSort(arr);
             Assert.That(result.Count, Is.EqualTo(0));
         }
         [Test]
@@ -130,7 +130,7 @@ namespace AlgorithmNetTests
                 new Person {Id=3, Name="asd"}
             };
 
-            var result = prueba.SelectionSort(arr, "Id");
+            var result = shorts.SelectionSort(arr, "Id");
             Assert.That(result.Count, Is.EqualTo(4));
             Assert.That(result[0].Id, Is.EqualTo(1));
         }
@@ -139,7 +139,7 @@ namespace AlgorithmNetTests
         {
             var arr = new List<Person> {};
 
-            var result = prueba.SelectionSort(arr, "Id");
+            var result = shorts.SelectionSort(arr, "Id");
             Assert.That(result.Count, Is.EqualTo(0));
         }
         [Test]
@@ -152,7 +152,7 @@ namespace AlgorithmNetTests
                 new Person {Id=3, Name="asd"}
             };
 
-            var result = prueba.SelectionSort(arr, "Name");
+            var result = shorts.SelectionSort(arr, "Name");
             Assert.That(result.Count, Is.EqualTo(4));
             Assert.That(result[0].Id, Is.EqualTo(2));
         }

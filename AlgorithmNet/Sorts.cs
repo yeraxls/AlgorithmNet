@@ -9,7 +9,7 @@ using System.Xml.Linq;
 
 namespace AlgorithmNet
 {
-    public class Sorts
+    public class Sorts : ISorts
     {
         /// <summary>
         /// Given a array in the wrong order, swapping them, for sort it
